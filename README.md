@@ -1,2 +1,2 @@
 # MMRec
-A framework for MultiModal Recommendation.
+A framework for <ins>M</ins>ulti<ins>M</ins>odal <ins>Rec</ins>ommendation.
