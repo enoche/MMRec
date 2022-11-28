@@ -1,3 +1,3 @@
-# M$^3$Rec
+# $\text{M}^3\text{Rec}$
 
-M$^3$Rec: Towards a <ins>M</ins>odern <ins>M</ins>ulti<ins>M</ins>odal <ins>Rec</ins>ommendation Library
+$\text{M}^3\text{Rec}$: Towards a <ins>M</ins>odern <ins>M</ins>ulti<ins>M</ins>odal <ins>Rec</ins>ommendation Library
