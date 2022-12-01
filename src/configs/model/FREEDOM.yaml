@@ -1,0 +1,15 @@
+embedding_size: 64
+feat_embed_dim: 64
+weight_size: [64, 64]
+
+lambda_coeff: 0.9
+reg_weight: [0.0, 1e-05, 1e-04, 1e-03]
+
+n_mm_layers: 1
+n_ui_layers: 2
+knn_k: 10
+
+mm_image_weight: 0.1
+dropout: [0.8, 0.9]
+
+hyper_parameters: ["dropout", "reg_weight"]

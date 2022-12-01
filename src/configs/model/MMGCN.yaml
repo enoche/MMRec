@@ -1,0 +1,7 @@
+embedding_size: 64
+n_layers: 2
+reg_weight: [0, 0.00001, 0.0001, 0.001, 0.01, 0.1]
+learning_rate: [0.0001, 0.0005, 0.001.0.005, 0.01]
+
+hyper_parameters: ["reg_weight", "learning_rate"]
+
