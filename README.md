@@ -5,12 +5,12 @@
 </div>
 
 
-$\text{MMRec}$: A modern <ins>M</ins>ulti<ins>M</ins>odal <ins>Rec</ins>ommendation toolbox that simplifies your research.
+$\text{MMRec}$: A modern <ins>M</ins>ulti<ins>M</ins>odal <ins>Rec</ins>ommendation toolbox that simplifies your research.  
 Check the awesome [multimodal recommendation resources](https://github.com/enoche/MultimodalRecSys).
 
 ## Toolbox
 <p>
-<img src="./images/MMRec.png" width="400">
+<img src="./images/MMRec.png" width="500">
 </p>
 
 ## Supported Models
