@@ -1,6 +1,12 @@
 # $\text{MMRec}$
 
+<div align="center">
+  <a href="https://github.com/enoche/MultimodalRecSys"><img width="300px" height="auto" src="https://github.com/enoche/MMRec/blob/master/images/MMRec.png"></a>
+</div>
+
+
 $\text{MMRec}$: A modern <ins>M</ins>ulti<ins>M</ins>odal <ins>Rec</ins>ommendation toolbox that simplifies your research.
+Check the awesome [multimodal recommendation resources](https://github.com/enoche/MultimodalRecSys).
 
 ## Toolbox
 <p>
