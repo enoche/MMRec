@@ -21,6 +21,7 @@ source code at: `src\models`
 | VBPR              | [VBPR: Visual Bayesian Personalized Ranking from Implicit Feedback](https://arxiv.org/pdf/1510.01784.pdf)                                              | AAA'16                 | vbpr.py      |
 | MMGCN             | [MMGCN: Multi-modal Graph Convolution Network for Personalized Recommendation of Micro-video](https://staff.ustc.edu.cn/~hexn/papers/mm19-MMGCN.pdf)               | MM'19              | mmgcn.py  |
 | GRCN              | [Graph-Refined Convolutional Network for Multimedia Recommendation with Implicit Feedback](https://arxiv.org/pdf/2111.02036.pdf)            | MM'20      | grcn.py    |
+| MVGAE             | [Multi-Modal Variational Graph Auto-Encoder for Recommendation Systems](https://ieeexplore.ieee.org/abstract/document/9535249)              | TMM'21     | mvgae.py   |
 | LATTICE           | [Mining Latent Structures for Multimedia Recommendation](https://arxiv.org/pdf/2104.09036.pdf)                                               | MM'21               | lattice.py  |
 | **Newly added**  |                                                                                                        |                        |             |
 | BM3         | [Bootstrap Latent Representations for Multi-modal Recommendation](https://arxiv.org/pdf/2207.05969.pdf)                                          | arxiv                 | bm3.py |
