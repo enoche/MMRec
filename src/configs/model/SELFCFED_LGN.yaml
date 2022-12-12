@@ -1,0 +1,7 @@
+embedding_size: 64
+n_layers: [2]
+dropout: [0.5]
+reg_weight: [0.0]
+use_neg_sampling: False
+hyper_parameters: ["n_layers", "dropout", "reg_weight"]
+
