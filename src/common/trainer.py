@@ -73,6 +73,12 @@ class Trainer(AbstractTrainer):
         self.valid_metric_bigger = config['valid_metric_bigger']
         self.test_batch_size = config['eval_batch_size']
         self.device = config['device']
+        self.weight_decay = 0.0
+        if config['weight_decay'] is not None:
+            wd = config['weight_decay']
+            self.weight_decay = eval(wd) if isinstance(wd, str) else wd
+
+        self.req_training = config['req_training']
 
         self.start_epoch = 0
         self.cur_step = 0
@@ -105,13 +111,13 @@ class Trainer(AbstractTrainer):
             torch.optim: the optimizer
         """
         if self.learner.lower() == 'adam':
-            optimizer = optim.Adam(self.model.parameters(), lr=self.learning_rate)
+            optimizer = optim.Adam(self.model.parameters(), lr=self.learning_rate, weight_decay=self.weight_decay)
         elif self.learner.lower() == 'sgd':
-            optimizer = optim.SGD(self.model.parameters(), lr=self.learning_rate)
+            optimizer = optim.SGD(self.model.parameters(), lr=self.learning_rate, weight_decay=self.weight_decay)
         elif self.learner.lower() == 'adagrad':
-            optimizer = optim.Adagrad(self.model.parameters(), lr=self.learning_rate)
+            optimizer = optim.Adagrad(self.model.parameters(), lr=self.learning_rate, weight_decay=self.weight_decay)
         elif self.learner.lower() == 'rmsprop':
-            optimizer = optim.RMSprop(self.model.parameters(), lr=self.learning_rate)
+            optimizer = optim.RMSprop(self.model.parameters(), lr=self.learning_rate, weight_decay=self.weight_decay)
         else:
             self.logger.warning('Received unrecognized optimizer, set default Adam optimizer')
             optimizer = optim.Adam(self.model.parameters(), lr=self.learning_rate)
@@ -131,6 +137,8 @@ class Trainer(AbstractTrainer):
             multiple parts and the model return these multiple parts loss instead of the sum of loss, It will return a
             tuple which includes the sum of loss in each part.
         """
+        if not self.req_training:
+            return 0.0, []
         self.model.train()
         loss_func = loss_func or self.model.calculate_loss
         total_loss = None

@@ -1,0 +1,7 @@
+
+knn_k: [10]
+shrink: [10]
+req_training: False
+epochs: 1
+hyper_parameters: ['shrink', 'knn_k']
+

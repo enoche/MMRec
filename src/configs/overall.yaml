@@ -14,6 +14,8 @@ save_recommended_topk: True
 recommend_topk: 'recommend_topk/'
 
 embedding_size: 64
+weight_decay: 0.0
+req_training: True
 #embedding_size: 3780
 
 # training settings
