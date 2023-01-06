@@ -27,6 +27,7 @@ source code at: `src\models`
 | ItemKNNCBF             | [Are We Really Making Much Progress? A Worrying Analysis of Recent Neural Recommendation Approaches](https://arxiv.org/pdf/1907.06902.pdf)               | RecSys'19              | itemknncbf.py  |
 | GRCN              | [Graph-Refined Convolutional Network for Multimedia Recommendation with Implicit Feedback](https://arxiv.org/pdf/2111.02036.pdf)            | MM'20      | grcn.py    |
 | MVGAE             | [Multi-Modal Variational Graph Auto-Encoder for Recommendation Systems](https://ieeexplore.ieee.org/abstract/document/9535249)              | TMM'21     | mvgae.py   |
+| DualGNN           | [DualGNN: Dual Graph Neural Network for Multimedia Recommendation](https://ieeexplore.ieee.org/abstract/document/9662655)                   | TMM'21     | dualgnn.py   |
 | LATTICE           | [Mining Latent Structures for Multimedia Recommendation](https://arxiv.org/pdf/2104.09036.pdf)                                               | MM'21               | lattice.py  |
 | **Newly added**  |                                                                                                        |                        |             |
 | BM3         | [Bootstrap Latent Representations for Multi-modal Recommendation](https://arxiv.org/pdf/2207.05969.pdf)                                          | arxiv                 | bm3.py |
