@@ -29,6 +29,7 @@ source code at: `src\models`
 | MVGAE             | [Multi-Modal Variational Graph Auto-Encoder for Recommendation Systems](https://ieeexplore.ieee.org/abstract/document/9535249)              | TMM'21     | mvgae.py   |
 | DualGNN           | [DualGNN: Dual Graph Neural Network for Multimedia Recommendation](https://ieeexplore.ieee.org/abstract/document/9662655)                   | TMM'21     | dualgnn.py   |
 | LATTICE           | [Mining Latent Structures for Multimedia Recommendation](https://arxiv.org/pdf/2104.09036.pdf)                                               | MM'21               | lattice.py  |
+| SLMRec            | [Self-supervised Learning for Multimedia Recommendation](https://ieeexplore.ieee.org/document/9811387) |  TMM'22         |                  slmrec.py |
 | **Newly added**  |                                                                                                        |                        |             |
 | BM3         | [Bootstrap Latent Representations for Multi-modal Recommendation](https://arxiv.org/pdf/2207.05969.pdf)                                          | arxiv                 | bm3.py |
 | FREEDOM | [A Tale of Two Graphs: Freezing and Denoising Graph Structures for Multimodal Recommendation](https://arxiv.org/pdf/2211.06924.pdf)                                 | arxiv                  | freedom.py  |
