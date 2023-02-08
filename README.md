@@ -6,7 +6,7 @@
 
 
 $\text{MMRec}$: A modern <ins>M</ins>ulti<ins>M</ins>odal <ins>Rec</ins>ommendation toolbox that simplifies your research.  
-Check the awesome [multimodal recommendation resources](https://github.com/enoche/MultimodalRecSys).
+:point_right: Check the awesome [multimodal recommendation resources](https://github.com/enoche/MultimodalRecSys).
 
 ## Toolbox
 <p>
