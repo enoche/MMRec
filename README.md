@@ -13,6 +13,16 @@ $\text{MMRec}$: A modern <ins>M</ins>ulti<ins>M</ins>odal <ins>Rec</ins>ommendat
 <img src="./images/MMRec.png" width="500">
 </p>
 
+#### Please cite our paper if this framework helps you:
+```
+@article{zhou2023mmrecsm,
+  author = {Zhou, Xin},
+  title = {MMRec: Simplifying Multimodal Recommendation},
+  year = {2023},
+  journal={arXiv preprint arXiv:2302.03497},
+}
+```
+
 ## Supported Models
 source code at: `src\models`
 
