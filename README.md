@@ -5,7 +5,7 @@
 </div>
 
 
-$\text{MMRec}$: A modern <ins>M</ins>ulti<ins>M</ins>odal <ins>Rec</ins>ommendation toolbox that simplifies your research.  
+$\text{MMRec}$: A modern <ins>M</ins>ulti<ins>M</ins>odal <ins>Rec</ins>ommendation toolbox that simplifies your research [arXiv](https://arxiv.org/abs/2302.03497).  
 :point_right: Check the awesome [multimodal recommendation resources](https://github.com/enoche/MultimodalRecSys).
 
 ## Toolbox
