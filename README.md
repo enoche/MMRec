@@ -15,6 +15,13 @@ $\text{MMRec}$: A modern <ins>M</ins>ulti<ins>M</ins>odal <ins>Rec</ins>ommendat
 
 #### Please cite our paper if this framework helps you:
 ```
+@article{zhou2023comprehensive,
+      title={A Comprehensive Survey on Multimodal Recommender Systems: Taxonomy, Evaluation, and Future Directions}, 
+      author={Hongyu Zhou and Xin Zhou and Zhiwei Zeng and Lingzi Zhang and Zhiqi Shen},
+      year={2023},
+      journal={arXiv preprint arXiv:2302.04473},
+}
+
 @article{zhou2023mmrecsm,
   author = {Zhou, Xin},
   title = {MMRec: Simplifying Multimodal Recommendation},
