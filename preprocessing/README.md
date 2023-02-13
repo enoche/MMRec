@@ -12,5 +12,5 @@
 
 ## DualGNN requires additional operation to generate the u-u graph
 1. Run `dualgnn-gen-u-u-matrix.py` on a dataset `baby`:  
-`python dualgnn-gen-u-u-matrix.py -d baby`
+`python -d baby dualgnn-gen-u-u-matrix.py`
 2. The generated u-u graph should be located in the same dir as the dataset.
