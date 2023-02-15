@@ -3,7 +3,9 @@
 
 - datasets: [Amazon](http://jmcauley.ucsd.edu/data/amazon/links.html)  
 -- Rating file in `Files/Small subsets for experimentation`  
--- Meta files in `Per-category files`, [metadata], [image features]
+-- Meta files in `Per-category files`, [metadata], [image features]  
+
+There has been an issue with the dataset site lately, as it automatically redirects to an updated version of the dataset. Keep pressing `esc` to stop the redirecting action.
 
 ## Step by step
 1. Performing 5-core filtering, re-indexing - `run 0rating2inter.ipynb`
