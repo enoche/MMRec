@@ -1,0 +1,11 @@
+embedding_size: 64
+feat_embed_dim: 64
+
+n_mm_layers: 1
+n_layers: 2
+knn_k: 10
+mm_image_weight: 0.1
+aggr_mode: ['add']
+learning_rate: [0.1, 0.01, 0.001, 0.0001, 0.00001]
+reg_weight: [0.1, 0.01, 0.001, 0.0001, 0.00001]
+hyper_parameters: ["aggr_mode", "reg_weight", "learning_rate"]
