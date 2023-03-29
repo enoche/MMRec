@@ -37,7 +37,7 @@ source code at: `src\models`
 | **Model**       | **Paper (PDF)**                                                                                             | **Conference/Journal** | **Code**    |
 |------------------|--------------------------------------------------------------------------------------------------------|------------------------|-------------|
 | **General models**  |                                                                                                        |                        |             |
-| SelfCF              | [SelfCF: A Simple Framework for Self-supervised Collaborative Filtering](https://arxiv.org/pdf/2107.03019.pdf)                                 | arxiv                  | selfcfed_lgn.py  |
+| SelfCF              | [SelfCF: A Simple Framework for Self-supervised Collaborative Filtering](https://arxiv.org/pdf/2107.03019.pdf)                                 | ACM TORS'23                  | selfcfed_lgn.py  |
 | LayerGCN            | [Layer-refined Graph Convolutional Networks for Recommendation](https://arxiv.org/pdf/2207.11088.pdf)                                          | ICDE'23                | layergcn.py  |
 | **Multimodal models**  |                                                                                                        |                        |             |
 | VBPR              | [VBPR: Visual Bayesian Personalized Ranking from Implicit Feedback](https://arxiv.org/pdf/1510.01784.pdf)                                              | AAA'16                 | vbpr.py      |
