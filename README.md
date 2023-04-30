@@ -14,23 +14,6 @@ $\text{MMRec}$: A modern <ins>M</ins>ulti<ins>M</ins>odal <ins>Rec</ins>ommendat
 <img src="./images/MMRec.png" width="500">
 </p>
 
-#### Please cite our paper if this framework helps you:
-```
-@article{zhou2023comprehensive,
-      title={A Comprehensive Survey on Multimodal Recommender Systems: Taxonomy, Evaluation, and Future Directions}, 
-      author={Hongyu Zhou and Xin Zhou and Zhiwei Zeng and Lingzi Zhang and Zhiqi Shen},
-      year={2023},
-      journal={arXiv preprint arXiv:2302.04473},
-}
-
-@article{zhou2023mmrecsm,
-  author = {Zhou, Xin},
-  title = {MMRec: Simplifying Multimodal Recommendation},
-  year = {2023},
-  journal={arXiv preprint arXiv:2302.03497},
-}
-```
-
 ## Supported Models
 source code at: `src\models`
 
@@ -53,3 +36,28 @@ source code at: `src\models`
 | FREEDOM | [A Tale of Two Graphs: Freezing and Denoising Graph Structures for Multimodal Recommendation](https://arxiv.org/pdf/2211.06924.pdf)                                 | arxiv                  | freedom.py  |
 | DRAGON  | [Enhancing Dyadic Relations with Homogeneous Graphs for Multimodal Recommendation](https://arxiv.org/pdf/2301.12097.pdf)                                 | arxiv                  | dragon.py  |
 
+
+#### Please consider to cite our paper if this framework helps you, thanks:
+```
+@inproceedings{zhou2023bootstrap,
+author = {Zhou, Xin and Zhou, Hongyu and Liu, Yong and Zeng, Zhiwei and Miao, Chunyan and Wang, Pengwei and You, Yuan and Jiang, Feijun},
+title = {Bootstrap Latent Representations for Multi-Modal Recommendation},
+booktitle = {Proceedings of the ACM Web Conference 2023},
+pages = {845–854},
+year = {2023}
+}
+
+@article{zhou2023comprehensive,
+      title={A Comprehensive Survey on Multimodal Recommender Systems: Taxonomy, Evaluation, and Future Directions}, 
+      author={Hongyu Zhou and Xin Zhou and Zhiwei Zeng and Lingzi Zhang and Zhiqi Shen},
+      year={2023},
+      journal={arXiv preprint arXiv:2302.04473},
+}
+
+@article{zhou2023mmrecsm,
+  author = {Zhou, Xin},
+  title = {MMRec: Simplifying Multimodal Recommendation},
+  year = {2023},
+  journal={arXiv preprint arXiv:2302.03497},
+}
+```
