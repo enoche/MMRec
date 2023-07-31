@@ -20,9 +20,9 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from models.common.encoders import LightGCN_Encoder
-from models.common.abstract_recommender import GeneralRecommender
-from models.common.loss import BPRLoss, EmbLoss, L2Loss
+from common.encoders import LightGCN_Encoder
+from common.abstract_recommender import GeneralRecommender
+from common.loss import BPRLoss, EmbLoss, L2Loss
 
 
 class SELFCFED_LGN(GeneralRecommender):
