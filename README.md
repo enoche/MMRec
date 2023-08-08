@@ -34,6 +34,7 @@ source code at: `src\models`
 | **Newly added**  |                                                                                                        |                        |             |
 | BM3         | [Bootstrap Latent Representations for Multi-modal Recommendation](https://arxiv.org/pdf/2207.05969.pdf)                                          | WWW'23                 | bm3.py |
 | FREEDOM | [A Tale of Two Graphs: Freezing and Denoising Graph Structures for Multimodal Recommendation](https://arxiv.org/pdf/2211.06924.pdf)                                 | MM'23                  | freedom.py  |
+| MGCN     | [Multi-View Graph Convolutional Network for Multimedia Recommendation](https://arxiv.org/ftp/arxiv/papers/2308/2308.03588.pdf)                       | MM'23               | mgcn.py          |
 | DRAGON  | [Enhancing Dyadic Relations with Homogeneous Graphs for Multimodal Recommendation](https://arxiv.org/pdf/2301.12097.pdf)                                 | ECAI'23                | dragon.py  |
 
 
