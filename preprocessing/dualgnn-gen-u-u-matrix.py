@@ -50,7 +50,7 @@ if __name__ == 	'__main__':
     print(f'Generating u-u matrix for {dataset_name} ...\n')
 
     config = {}
-    os.chdir('../zh-src')
+    os.chdir('../src')
     cur_dir = os.getcwd()
     con_dir = os.path.join(cur_dir, 'configs') # get config dir
     overall_config_file = os.path.join(con_dir, "overall.yaml")
