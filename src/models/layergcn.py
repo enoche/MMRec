@@ -55,7 +55,7 @@ class LayerGCN(GeneralRecommender):
         keep_len = int(self.edge_values.size(0) * (1. - self.dropout))
         if self.pruning_random:
             # pruning randomly
-            keep_idx = torch.tensor(random.sample(range(self.edge_values.size(0)), keep_len)).to(self.device)
+            keep_idx = torch.tensor(random.sample(range(self.edge_values.size(0)), keep_len))
         else:
             # pruning edges by pro
             keep_idx = torch.multinomial(self.edge_values, keep_len)         # prune high-degree nodes
