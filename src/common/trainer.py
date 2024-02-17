@@ -59,7 +59,7 @@ class Trainer(AbstractTrainer):
 
     """
 
-    def __init__(self, config, model):
+    def __init__(self, config, model, mg):
         super(Trainer, self).__init__(config, model)
 
         self.logger = getLogger()
@@ -103,6 +103,10 @@ class Trainer(AbstractTrainer):
 
         self.item_tensor = None
         self.tot_item_num = None
+        self.mg = mg
+        self.alpha1 = config['alpha1']
+        self.alpha2 = config['alpha2']
+        self.beta = config['beta']
 
     def _build_optimizer(self):
         r"""Init the Optimizer
@@ -145,7 +149,9 @@ class Trainer(AbstractTrainer):
         loss_batches = []
         for batch_idx, interaction in enumerate(train_data):
             self.optimizer.zero_grad()
+            second_inter = interaction.clone()
             losses = loss_func(interaction)
+            
             if isinstance(losses, tuple):
                 loss = sum(losses)
                 loss_tuple = tuple(per_loss.item() for per_loss in losses)
@@ -156,7 +162,28 @@ class Trainer(AbstractTrainer):
             if self._check_nan(loss):
                 self.logger.info('Loss is nan at epoch: {}, batch index: {}. Exiting.'.format(epoch_idx, batch_idx))
                 return loss, torch.tensor(0.0)
-            loss.backward()
+            
+            if self.mg and batch_idx % self.beta == 0:
+                first_loss = self.alpha1 * loss
+                first_loss.backward()
+
+                self.optimizer.step()
+                self.optimizer.zero_grad()
+                
+                losses = loss_func(second_inter)
+                if isinstance(losses, tuple):
+                    loss = sum(losses)
+                else:
+                    loss = losses
+                    
+                if self._check_nan(loss):
+                    self.logger.info('Loss is nan at epoch: {}, batch index: {}. Exiting.'.format(epoch_idx, batch_idx))
+                    return loss, torch.tensor(0.0)
+                second_loss = -1 * self.alpha2 * loss
+                second_loss.backward()
+            else:
+                loss.backward()
+                
             if self.clip_grad_norm:
                 clip_grad_norm_(self.model.parameters(), **self.clip_grad_norm)
             self.optimizer.step()
