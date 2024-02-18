@@ -59,7 +59,7 @@ class Trainer(AbstractTrainer):
 
     """
 
-    def __init__(self, config, model, mg):
+    def __init__(self, config, model, mg=False):
         super(Trainer, self).__init__(config, model)
 
         self.logger = getLogger()
