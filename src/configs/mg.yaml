@@ -1,0 +1,5 @@
+alpha1: [1.0]
+alpha2: [0.1, 0.2, 0.3]
+beta: [3]
+
+hyper_parameters: ["alpha1", "alpha2", "beta"]

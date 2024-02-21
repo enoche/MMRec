@@ -43,7 +43,7 @@ class Config(object):
     Finally the learning_rate is equal to 0.02.
     """
 
-    def __init__(self, model=None, dataset=None, config_dict=None):
+    def __init__(self, model=None, dataset=None, config_dict=None, mg=False):
         """
         Args:
             model (str/AbstractRecommender): the model name or the model class, default is None, if it is None, config
@@ -59,13 +59,13 @@ class Config(object):
         config_dict['model'] = model
         config_dict['dataset'] = dataset
         # model type
-        self.final_config_dict = self._load_dataset_model_config(config_dict)
+        self.final_config_dict = self._load_dataset_model_config(config_dict, mg)
         # config in cmd and main.py are latest
         self.final_config_dict.update(config_dict)
         self._set_default_parameters()
         self._init_device()
 
-    def _load_dataset_model_config(self, config_dict):
+    def _load_dataset_model_config(self, config_dict, mg):
         file_config_dict = dict()
         file_list = []
         # get dataset and model files
@@ -74,11 +74,19 @@ class Config(object):
         file_list.append(os.path.join(cur_dir, "overall.yaml"))
         file_list.append(os.path.join(cur_dir, "dataset", "{}.yaml".format(config_dict['dataset'])))
         file_list.append(os.path.join(cur_dir, "model", "{}.yaml".format(config_dict['model'])))
+        if mg:
+            file_list.append(os.path.join(cur_dir, "mg.yaml"))
 
+        hyper_parameters = []
         for file in file_list:
             if os.path.isfile(file):
                 with open(file, 'r', encoding='utf-8') as f:
-                    file_config_dict.update(yaml.load(f.read(), Loader=self._build_yaml_loader()))
+                    fdata = yaml.load(f.read(), Loader=self._build_yaml_loader())
+                    if fdata.get('hyper_parameters'):
+                        hyper_parameters.extend(fdata['hyper_parameters'])
+                    file_config_dict.update(fdata)
+                    
+        file_config_dict['hyper_parameters'] = hyper_parameters
         return file_config_dict
 
     def _build_yaml_loader(self):
