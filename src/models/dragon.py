@@ -68,7 +68,7 @@ class DRAGON(GeneralRecommender):
             self.text_trs = nn.Linear(self.t_feat.shape[1], self.feat_embed_dim)
 
         if os.path.exists(mm_adj_file):
-            self.mm_adj = torch.load(mm_adj_file)
+            self.mm_adj = torch.load(mm_adj_file).to(self.device)
         else:
             if self.v_feat is not None:
                 indices, image_adj = self.get_knn_adj_mat(self.image_embedding.weight.detach())
