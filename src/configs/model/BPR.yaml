@@ -1,0 +1,5 @@
+embedding_size: 64
+is_multimodal_model: False
+reg_weight: [2.0, 1.0, 1e-01, 1e-02, 1e-03, 1e-04, 1e-05]
+
+hyper_parameters: ["reg_weight"]

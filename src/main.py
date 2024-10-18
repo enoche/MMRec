@@ -17,7 +17,6 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--model', '-m', type=str, default='SELFCFED_LGN', help='name of models')
     parser.add_argument('--dataset', '-d', type=str, default='baby', help='name of datasets')
-    parser.add_argument('--mg', action="store_true", help='whether to use Mirror Gradient, default is False')
 
     config_dict = {
         'gpu_id': 0,
