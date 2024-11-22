@@ -36,7 +36,8 @@ source code at: `src\models`
 | FREEDOM | [A Tale of Two Graphs: Freezing and Denoising Graph Structures for Multimodal Recommendation](https://arxiv.org/abs/2211.06924)                                 | MM'23                  | freedom.py  |
 | MGCN     | [Multi-View Graph Convolutional Network for Multimedia Recommendation](https://arxiv.org/abs/2308.03588)                       | MM'23               | mgcn.py          |
 | DRAGON  | [Enhancing Dyadic Relations with Homogeneous Graphs for Multimodal Recommendation](https://arxiv.org/abs/2301.12097)                                 | ECAI'23                | dragon.py  |
-| MG  | [Mirror Gradient: Towards Robust Multimodal Recommender Systems via Exploring Flat Local Minima](https://arxiv.org/abs/2402.11262 )                                 | WWW'24                | [trainer.py](src/common/trainer.py#L166-L185)  |
+| MG  | [Mirror Gradient: Towards Robust Multimodal Recommender Systems via Exploring Flat Local Minima](https://arxiv.org/abs/2402.11262)                                 | WWW'24                | [trainer.py](src/common/trainer.py#L166-L185)  |
+| LGMRec  | [LGMRec: Local and Global Graph Learning for Multimodal Recommendation](https://arxiv.org/abs/2312.16400)                                 | AAAI'24                | lgmrec.py |
 
 
 #### Please consider to cite our paper if this framework helps you, thanks:
@@ -56,10 +57,11 @@ year = {2023}
       journal={arXiv preprint arXiv:2302.04473},
 }
 
-@article{zhou2023mmrecsm,
-  author = {Zhou, Xin},
-  title = {MMRec: Simplifying Multimodal Recommendation},
-  year = {2023},
-  journal={arXiv preprint arXiv:2302.03497},
+@inproceedings{zhou2023mmrec,
+  title={Mmrec: Simplifying multimodal recommendation},
+  author={Zhou, Xin},
+  booktitle={Proceedings of the 5th ACM International Conference on Multimedia in Asia Workshops},
+  pages={1--2},
+  year={2023}
 }
 ```
