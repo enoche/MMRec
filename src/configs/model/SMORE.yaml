@@ -1,0 +1,17 @@
+embedding_size: 64
+n_ui_layers: [3,4]
+n_layers: 1
+
+learning_rate_scheduler: [0.96, 50]
+lambda_coeff: 0.9
+reg_weight: [1e-5,1e-4]
+learning_rate: 0.001
+
+cl_loss: 0.01 
+temperature: 0.2
+image_knn_k: [10,15,20,40]
+text_knn_k: [10,15,20,40]
+
+dropout_rate : [0, 0.1]
+
+hyper_parameters: ["n_ui_layers", "image_knn_k", "text_knn_k", "reg_weight", "dropout_rate"]
