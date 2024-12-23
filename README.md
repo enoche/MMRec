@@ -38,6 +38,7 @@ source code at: `src\models`
 | DRAGON  | [Enhancing Dyadic Relations with Homogeneous Graphs for Multimodal Recommendation](https://arxiv.org/abs/2301.12097)                                 | ECAI'23                | dragon.py  |
 | MG  | [Mirror Gradient: Towards Robust Multimodal Recommender Systems via Exploring Flat Local Minima](https://arxiv.org/abs/2402.11262)                                 | WWW'24                | [trainer.py](src/common/trainer.py#L166-L185)  |
 | LGMRec  | [LGMRec: Local and Global Graph Learning for Multimodal Recommendation](https://arxiv.org/abs/2312.16400)                                 | AAAI'24                | lgmrec.py |
+| SMORE   | [Spectrum-based Modality Representation Fusion Graph Convolutional Network for Multimodal Recommendation](https://arxiv.org/abs/2412.14978) | WSDM'25           | smore.py  |
 
 
 #### Please consider to cite our paper if this framework helps you, thanks:
