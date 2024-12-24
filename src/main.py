@@ -24,6 +24,6 @@ if __name__ == '__main__':
 
     args, _ = parser.parse_known_args()
 
-    quick_start(model=args.model, dataset=args.dataset, config_dict=config_dict, save_model=True, mg=args.mg)
+    quick_start(model=args.model, dataset=args.dataset, config_dict=config_dict, save_model=True)
 
 
