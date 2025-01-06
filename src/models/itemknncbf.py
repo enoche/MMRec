@@ -64,6 +64,42 @@ class ItemKNNCBF(GeneralRecommender):
         weighted_adjacency_matrix = (torch.zeros_like(sim)).scatter_(-1, knn_ind, knn_val)
         return weighted_adjacency_matrix
 
+    def build_item_sim_matrix_with_blocks(self, features, block_size=1000):
+        from tqdm import tqdm
+        """
+        分块计算物品相似矩阵并显示进度条。
+
+        :param features: Tensor, 物品特征向量，形状为 (num_items, feature_dim)
+        :param block_size: int, 分块大小，默认 1000
+        :return: Tensor, 权重邻接矩阵
+        """
+        num_items = features.size(0)
+        i_norm = torch.norm(features, p=2, dim=-1, keepdim=True)
+        shrink = self.shrink
+
+        # 初始化相似矩阵
+        weighted_adjacency_matrix = torch.zeros(num_items, num_items, device=features.device)
+
+        # 分块计算
+        for start_idx in tqdm(range(0, num_items, block_size), desc="Computing item similarities"):
+            end_idx = min(start_idx + block_size, num_items)
+
+            # 当前分块
+            block_features = features[start_idx:end_idx]
+            block_norm = i_norm[start_idx:end_idx]
+
+            # 计算分块与所有物品的相似性
+            ij = torch.mm(block_features, features.T)
+            ij_norm = block_norm * i_norm.T + shrink
+            sim = ij.div(ij_norm)
+
+            # top-k
+            knn_val, knn_ind = torch.topk(sim, self.knn_k, dim=-1)
+            weighted_adjacency_matrix[start_idx:end_idx] = (torch.zeros_like(sim)
+                                                            .scatter_(-1, knn_ind, knn_val))
+
+        return weighted_adjacency_matrix
+
     def calculate_loss(self, interaction):
         tmp_v = torch.tensor(0.0)
         return tmp_v
