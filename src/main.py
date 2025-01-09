@@ -19,7 +19,7 @@ if __name__ == '__main__':
     parser.add_argument('--dataset', '-d', type=str, default='baby', help='name of datasets')
 
     config_dict = {
-        'gpu_id': 0,
+        'gpu_id': 2,
     }
 
     args, _ = parser.parse_known_args()

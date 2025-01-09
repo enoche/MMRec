@@ -19,6 +19,7 @@ import os
 def quick_start(model, dataset, config_dict, save_model=True, mg=False):
     # merge config dict
     config = Config(model, dataset, config_dict, mg)
+    print(config)
     init_logger(config)
     logger = getLogger()
     # print config infor

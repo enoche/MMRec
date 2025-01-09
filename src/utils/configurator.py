@@ -70,10 +70,11 @@ class Config(object):
         file_list = []
         # get dataset and model files
         cur_dir = os.getcwd()
-        cur_dir = os.path.join(cur_dir, 'configs')
+        cur_dir = os.path.join(cur_dir, 'src/configs')
         file_list.append(os.path.join(cur_dir, "overall.yaml"))
         file_list.append(os.path.join(cur_dir, "dataset", "{}.yaml".format(config_dict['dataset'])))
         file_list.append(os.path.join(cur_dir, "model", "{}.yaml".format(config_dict['model'])))
+        print(f'file_list:{file_list}')
         if mg:
             file_list.append(os.path.join(cur_dir, "mg.yaml"))
 
