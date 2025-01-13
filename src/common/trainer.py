@@ -150,7 +150,7 @@ class Trainer(AbstractTrainer):
         for batch_idx, interaction in enumerate(train_data):
             self.optimizer.zero_grad()
             second_inter = interaction.clone()
-            losses = loss_func(interaction)
+            losses = loss_func(interaction) # interaction.shape : (3, batch_size)
             
             if isinstance(losses, tuple):
                 loss = sum(losses)
@@ -302,9 +302,10 @@ class Trainer(AbstractTrainer):
         for batch_idx, batched_data in enumerate(eval_data):
             # predict: interaction without item ids
             scores = self.model.full_sort_predict(batched_data)
-            masked_items = batched_data[1]
+            masked_items = batched_data[1] 
+            # batched_data가 dataloader.py의 def _get_pos_items_per_u 결과물, 즉 inter_user, inter_item으로 이루어진
             # mask out pos items
-            scores[masked_items[0], masked_items[1]] = -1e10
+            scores[masked_items[0], masked_items[1]] = -1e10 
             # rank and get top-k
             _, topk_index = torch.topk(scores, max(self.config['topk']), dim=-1)  # nusers x topk
             batch_matrix_list.append(topk_index)

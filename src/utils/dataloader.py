@@ -188,6 +188,7 @@ class TrainDataLoader(AbstractDataLoader):
             form (str, optional): Sparse matrix format. Defaults to ``coo``.
             value_field (str, optional): Data of sparse matrix, which should exist in ``df_feat``.
                 Defaults to ``None``.
+ 
 
         Returns:
             scipy.sparse: Sparse matrix in form ``coo`` or ``csr``.

@@ -117,7 +117,7 @@ class LightGCN(GeneralRecommender):
         embeddings_list = [all_embeddings]
 
         for layer_idx in range(self.n_layers):
-            all_embeddings = torch.sparse.mm(self.norm_adj_matrix, all_embeddings)
+            all_embeddings = torch.sparse.mm(self.norm_adj_matrix, all_embeddings) # layer별로 lightgcn 연산
             embeddings_list.append(all_embeddings)
         lightgcn_all_embeddings = torch.stack(embeddings_list, dim=1)
         lightgcn_all_embeddings = torch.mean(lightgcn_all_embeddings, dim=1)
@@ -125,7 +125,7 @@ class LightGCN(GeneralRecommender):
         user_all_embeddings = lightgcn_all_embeddings[:self.n_users, :]
         item_all_embeddings = lightgcn_all_embeddings[self.n_users:, :]
 
-        return user_all_embeddings, item_all_embeddings
+        return user_all_embeddings, item_all_embeddings # lightgcn 결과물
 
     def calculate_loss(self, interaction):
         user = interaction[0]
