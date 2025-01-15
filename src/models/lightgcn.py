@@ -97,7 +97,7 @@ class LightGCN(GeneralRecommender):
         col = L.col
         i = torch.LongTensor([row, col])
         data = torch.FloatTensor(L.data)
-        SparseL = torch.sparse.FloatTensor(i, data, torch.Size(L.shape))
+        SparseL = torch.sparse.FloatTensor(i, data, torch.Size(L.shape)) # indice, values, shape
         return SparseL
 
     def get_ego_embeddings(self):
