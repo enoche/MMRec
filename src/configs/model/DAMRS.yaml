@@ -1,0 +1,17 @@
+embedding_size: 64
+feat_embed_dim: 64
+weight_size: [64, 64]
+
+
+kl_weight: [1] # [10, 0.1, 0.01] # [1] # [0, 0.1, 1e-02, 1e-04, 1e-03]
+neighbor_weight: [0.001] # [ 1, 0.1, 0.01, 0.001, 0.0001, 0] # [0.001] # [1, 0.1, 0.001, 0.0001]
+
+n_mm_layers: [1] # [1, 2]
+n_ui_layers: [2] # [1, 2, 3]
+knn_k: 10 # [3, 5, 10, 15, 20]
+learning_rate: [0.001] # , 0.0005, 0.0001]
+
+item_graph_dict_file: 'item_graph_dict_2.npy'
+
+hyper_parameters: ["n_ui_layers", "neighbor_weight", "kl_weight", "n_mm_layers", "learning_rate"]
+
