@@ -41,6 +41,7 @@ source code at: `src\models`
 | DA-MRS  | [Improving Multi-modal Recommender Systems by Denoising and Aligning Multi-modal Content and User Feedback](https://dl.acm.org/doi/10.1145/3637528.3671703)                   | KDD'24                | damrs.py |
 | SMORE   | [Spectrum-based Modality Representation Fusion Graph Convolutional Network for Multimodal Recommendation](https://arxiv.org/abs/2412.14978) | WSDM'25           | smore.py  |
 | PGL | [Mind Individual Information! Principal Graph Learning for Multimedia Recommendation](https://ojs.aaai.org/index.php/AAAI/article/view/33429) | AAAI'25 | pgl.py |
+| MMGCF | [Multimodal Graph Collaborative Filtering for Recommendation with Graph Convolutional Networks](https://dl.acm.org/doi/abs/10.1145/3774935.3806158) | UMAP'26 | mmgcf.py |
 
 
 #### Please consider to cite our paper if this framework helps you, thanks:
