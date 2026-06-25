@@ -1,0 +1,39 @@
+# MMGCF – Multimodal Graph Collaborative Filtering
+# ──────────────────────────────────────────────────────────────────────────
+# Model hyperparameters
+# ──────────────────────────────────────────────────────────────────────────
+
+# Dimension of user/item ID embeddings (LightGCN output size).
+embedding_size: 64
+
+# Output dimension of the visual/text feature projection layers.
+# For non-concat fusion modes (mean, sum), this MUST equal
+# embedding_size so that ID and modal embeddings can be combined
+# element-wise.  Only concat mode handles differing dimensions natively.
+feat_embed_dim: 64
+
+# Number of LightGCN propagation layers over the user-item graph.
+n_ui_layers: [1,2,3]
+
+# L2 regularisation weight applied to initial (un-propagated) ID embeddings.
+reg_weight: [1e-1, 1e-2, 1e-3, 1e-4]
+
+# How to combine the ID embedding with multimodal feature embeddings.
+# Options: mean | sum | concat
+fusion_mode: ['mean','sum','concat']
+
+# How to weight ID vs. modal embeddings before/during fusion.
+#   equal      – fuse modalities first (mean/sum/prod/concat), then fuse
+#                with ID embedding at equal weight  [recommended default]
+#   alpha      – learnable sigmoid gate α; ID emb scaled by α,
+#                each modal feat scaled by (1−α), then jointly fused
+#   normalized – L2-normalise every embedding before fusing; ID emb is
+#                additionally scaled by n_modalities for balance
+weighting: ['equal', 'alpha', 'normalized']
+
+# Edge dropout probability applied before each training epoch.
+# Edges are sampled proportional to their normalised adjacency weight
+# (degree-sensitive pruning).  Set to 0.0 to disable.
+dropout: [0.2, 0.5, 0.8]
+
+hyper_parameters: ['n_ui_layers', 'reg_weight', 'fusion_mode', 'weighting', 'dropout']
