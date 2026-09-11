@@ -39,10 +39,16 @@ field_separator: "\t"
 
 
 # evaluation settings
-metrics: ["Recall", "NDCG", "Precision", "MAP"]
+# accuracy metrics: Recall, Recall2, Precision, NDCG, MAP
+# beyond-accuracy (item-distribution) metrics: GiniIndex, AveragePopularity, TailPercentage, ItemCoverage, ShannonEntropy
+metrics: ["Recall", "NDCG", "Precision", "MAP", "GiniIndex", "AveragePopularity", "TailPercentage", "ItemCoverage", "ShannonEntropy"]
 topk: [5, 10, 20, 50]
 valid_metric: Recall@20
 eval_batch_size: 4096
+# threshold defining the "long tail" item set for TailPercentage: a fraction
+# in (0, 1] of the least-popular training items, or an absolute popularity
+# count if > 1
+tail_ratio: 0.1
 
 #
 use_raw_features: False
