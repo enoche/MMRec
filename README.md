@@ -42,6 +42,7 @@ source code at: `src\models`
 | SMORE   | [Spectrum-based Modality Representation Fusion Graph Convolutional Network for Multimodal Recommendation](https://arxiv.org/abs/2412.14978) | WSDM'25           | smore.py  |
 | PGL | [Mind Individual Information! Principal Graph Learning for Multimedia Recommendation](https://ojs.aaai.org/index.php/AAAI/article/view/33429) | AAAI'25 | pgl.py |
 | MMGCF | [Multimodal Graph Collaborative Filtering for Recommendation with Graph Convolutional Networks](https://dl.acm.org/doi/abs/10.1145/3774935.3806158) | UMAP'26 | mmgcf.py |
+| MSCA | [Multi-view Semantic Contrastive Alignment for Multimodal Recommendation](https://dl.acm.org/doi/10.1145/3774904.3792192) | WWW'26 | msca.py |
 
 
 #### Please consider to cite our paper if this framework helps you, thanks:

@@ -1,0 +1,64 @@
+# ===== General Configuration =====
+
+embedding_size: 64
+n_layers: [1, 2, 3, 4]
+knn_k: 10
+is_sparse: True
+fusion_coeff: [0.1, 0.2, 0.3, 0.4, 0.5]
+tau: 0.2
+cl_weight: [0.001, 0.005, 0.01, 0.05, 0.1]
+reg_weight: [5e-6, 5e-7, 5e-8, 5e-9, 5e-10]
+
+# ===== Quick Start =====
+
+# ----- baby -----
+# embedding_size: 64
+# n_layers: [2]
+# knn_k: 10
+# is_sparse: True
+# fusion_coeff: [0.4]
+# tau: 0.2
+# cl_weight: [0.005]
+# reg_weight: [3e-7]
+
+# ----- sports -----
+# embedding_size: 64
+# n_layers: [3]
+# knn_k: 10
+# is_sparse: True
+# fusion_coeff: [0.3]
+# tau: 0.2
+# cl_weight: [0.005]
+# reg_weight: [5e-8]
+
+# ----- elec -----
+# embedding_size: 64
+# n_layers: [4]
+# knn_k: 10
+# is_sparse: True
+# fusion_coeff: [0.2]
+# tau: 0.2
+# cl_weight: [0.01]
+# reg_weight: [5e-10]
+
+# ----- microlens -----
+# embedding_size: 64
+# n_layers: [4]
+# knn_k: 10
+# is_sparse: True
+# fusion_coeff: [0.3]
+# tau: 0.2
+# cl_weight: [0.01]
+# reg_weight: [5e-9]
+
+# ----- clothing -----
+# embedding_size: 64
+# n_layers: [3]
+# knn_k: 10
+# is_sparse: True
+# fusion_coeff: [0.4]
+# tau: 0.2
+# cl_weight: [0.005]
+# reg_weight: [5e-8]
+
+hyper_parameters: ["n_layers", "fusion_coeff", "cl_weight", "reg_weight"]
